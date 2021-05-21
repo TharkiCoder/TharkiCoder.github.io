@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/prism.css">
+    <title>Tharki-Coder</title>
+  </head>
+  <body>
+    <!--===================================================
+                      Nav 1 Bar start here
+    ===============================================-->
+<nav class="navbar navbar-dark bg-danger bg-gradient">
+  <div class="container-fluid">
+    <a class="navbar-brand"><span class="text-info">Tharki</span>Coder</a>
+  </div>
+</nav>
+<!--===================================================
+                  Nav 2 Bar start here
+===============================================-->
+<div class="alert alert-warning" role="alert">
+      <div class="row" >
+        <div class="col">
+          <a class="navbar-brand"><span class="text-info">Algorithm</span></a>
+      </div>
+    <div class="col">
+    <div class="wrapper"><!-------------search box===================================-->
+      <div class="search-input">
+        <a href="" target="_self" hidden></a>
+        <input type="search" class="form-control mr-sm-2" placeholder="Type to search.." aria-label="Search">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fa fa-search"></i></div>
+      </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+  <!--===================================================
+                                Blog
+  ===============================================-->
+    <div class="container">
+
+      <div class="alert alert-secondary">
+        <div class="toast-header" id="===">
+          <img src="https://assets.leetcode.com/users/Amano45/avatar_1620966047.png" class="rounded me-2" alt="*" style="height:30px">
+          <strong class="me-auto">===============</strong>
+          <small>18/5/2021</small>
+        </div>
+        <div class="toast-body">
+          Kadane’s algorithm is used to find Largest Sum Contiguous Subarray.
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#write">
+            Read More>>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="write" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">==========</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  C++
+                  <pre>
+                    <code class="language-c"><xmp>
+</xmp>
+
+                  </code>
+                  </pre>
+                  PYTHON
+                  <pre>
+                    <code class="language-cpp"><xmp>
+
+                    </xmp>
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-secondary">
+        <div class="toast-header" id="Moore's Voting Algorithm">
+          <img src="https://assets.leetcode.com/users/Amano45/avatar_1620966047.png" class="rounded me-2" alt="*" style="height:30px">
+          <strong class="me-auto">Moore's Voting Algorithm</strong>
+          <small>18/5/2021 8:08</small>
+        </div>
+        <div class="toast-body">
+          Moore's Voting Algorithm: Given an integer array of length N. Check if there exists an integer which occurs more than floor(N/2) times. If there is no such element, print THERE IS NO MAJORITY ELEMENT..
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#MooreAlgorithm">
+            Read More>>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="MooreAlgorithm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Moore's Voting Algorithm</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  C++
+                  <pre>
+                    <code class="language-c"><xmp>
+#include <bits/stdc++.h>
+using namespace std;
+void isMajorityElement(int N, int input_array[]){
+    int majority_index=0,count=1;
+    for(int i=1;i<N;i++)  {
+        if(input_array[majority_index]==input_array[i])
+            count++;
+        else
+            count--;
+        if(count==0){
+            majority_index=i;
+            count=1;
+        }
+    }
+    count=0;
+    for(int i=0;i<N;i++) {
+        if(input_array[majority_index]==input_array[i])
+        count++;
+    }
+    if(count>N/2)
+        cout<<"MAJORITY ELEMENT: "<< input_array[majority_index]<< endl;
+    else
+        cout<<"THERE IS NO MAJORITY ELEMENT"<<endl;
+    }
+    int main(){
+        int input_array[]={2, 2, 3, 2, 4, 2, 5};
+        int N=sizeof(input_array)/sizeof(input_array[0]);
+        isMajorityElement(N, input_array);
+    	return 0;
+    }
+</xmp>
+                  </code>
+                  </pre>
+                  PYTHON
+                  <pre>
+                    <code class="language-cpp"><xmp>
+def majorityElement(input_array,N):
+    majority_element=input_array[0]
+    count = 1
+    for i in range(1,N):
+        if input_array[i]==majority_element:
+            count+=1
+        else:
+            count-=1
+        if count==0:
+            count=1
+            majority_element=input_array[i]
+    count = 0
+    for i in input_array:
+        if i==majority_element:
+            count+=1
+    if count>N//2:
+        print("MAJORITY ELEMENT: ",majority_element)
+    else:
+        print("THERE IS NO MAJORITY ELEMENT")
+if __name__=="__main__":
+    input_array=[2, 2, 3, 2, 4, 2, 5]
+    N=7
+    majorityElement(input_array,N)
+                    </xmp>
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="alert alert-secondary">
+        <div class="toast-header" id="Kadane’s algorithm">
+          <img src="https://assets.leetcode.com/users/Amano45/avatar_1620966047.png" class="rounded me-2" alt="*" style="height:30px">
+          <strong class="me-auto">Kadane’s algorithm</strong>
+          <small>18/5/2021 8:05</small>
+        </div>
+        <div class="toast-body">
+          Kadane’s algorithm is used to find Largest Sum Contiguous Subarray.
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Kadane’salgorithm">
+            Read More>>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Kadane’salgorithm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Kadane’s algorithm</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  C++
+                  <pre>
+                    <code class="language-c"><xmp>
+#include<iostream>
+#include<climits>
+using namespace std;
+int maxSubArraySum(int a[], int size)
+{
+    int max_so_far = INT_MIN, max_ending_here = 0;
+    for (int i = 0; i < size; i++)
+    {
+        max_ending_here = max_ending_here + a[i];
+        if (max_so_far < max_ending_here)
+            max_so_far = max_ending_here;
+        if (max_ending_here < 0)
+            max_ending_here = 0;
+    }
+    return max_so_far;
+}
+
+int main()
+{
+    int a[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int n = sizeof(a)/sizeof(a[0]);
+    int max_sum = maxSubArraySum(a, n);
+    cout << "Maximum contiguous sum is " << max_sum;
+    return 0;
+}</xmp>
+
+                  </code>
+                  </pre>
+                  PYTHON
+                  <pre>
+                    <code class="language-cpp"><xmp>
+from sys import maxint
+def maxSubArraySum(a,size):
+
+    max_so_far = -maxint - 1
+    max_ending_here = 0
+
+    for i in range(0, size):
+        max_ending_here = max_ending_here + a[i]
+        if (max_so_far < max_ending_here):
+            max_so_far = max_ending_here
+
+        if max_ending_here < 0:
+            max_ending_here = 0
+    return max_so_far
+a = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7]
+print "Maximum contiguous sum is", maxSubArraySum(a,len(a))
+                    </xmp>
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-secondary">
+        <div class="toast-header" id="Sieve of Eratosthenes">
+          <img src="https://assets.leetcode.com/users/Amano45/avatar_1620966047.png" class="rounded me-2" alt="*" style="height:30px">
+          <strong class="me-auto">Sieve of Eratosthenes</strong>
+          <small>18/5/2021 1:55</small>
+        </div>
+        <div class="toast-body">
+          The sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to any given limit.
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#SieveofEratosthenes">
+            Read More>>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="SieveofEratosthenes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Sieve of Eratosthenes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" alt=""><br>
+                  C++
+                  <pre>
+                    <code class="language-c"><xmp>
+#include<iostream>
+using namespace std;
+void isprime(int n){
+  int prime[n+1]={0};
+  for(int i=2;i<=n;i++){
+    if(prime[i]==0){
+      for(int j=i*i;j<=n;j+=i){
+        prime[j]=1;
+      }
+    }
+  }
+  for(int i= 2;i<=n;i++){
+    if(prime[i]==0){
+      cout<<i<<" ";
+    }
+  }cout<<endl;
+}
+
+int main(){
+  int n;
+  cin>>n;
+  isprime(n);
+}</xmp>
+
+                  </code>
+                  </pre>
+                  PYTHON
+                  <pre>
+                    <code class="language-cpp"><xmp>
+def SieveOfEratosthenes(n):
+	prime = [True for i in range(n+1)]
+	p = 2
+	while (p * p <= n):
+		if (prime[p] == True):
+			for i in range(p * p, n+1, p):
+				prime[i] = False
+		p += 1
+
+	for p in range(2, n+1):
+		if prime[p]:
+			print p,
+
+if __name__ == '__main__':
+	n = 30
+	print "Following are the prime numbers smaller",
+	print "than or equal to", n
+	SieveOfEratosthenes(n)</xmp>
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="suggestions.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<div class="alert alert-secondary">
+  <div class="toast-header" id="===">
+    <img src="https://assets.leetcode.com/users/Amano45/avatar_1620966047.png" class="rounded me-2" alt="*" style="height:30px">
+    <strong class="me-auto">===============</strong>
+    <small>18/5/2021</small>
+  </div>
+  <div class="toast-body">
+    Kadane’s algorithm is used to find Largest Sum Contiguous Subarray.
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#write">
+      Read More>>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="write" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">==========</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            C++
+            <pre>
+              <code class="language-c"><xmp>
+</xmp>
+
+            </code>
+            </pre>
+            PYTHON
+            <pre>
+              <code class="language-cpp"><xmp>
+
+              </xmp>
+            </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
